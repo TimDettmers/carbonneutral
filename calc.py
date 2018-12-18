@@ -45,7 +45,7 @@ def main(args):
     print('Your lab emitted {0:.2f} tons of CO2 equivalent by using GPUs'.format(kg_gpu/1000.))
     other_kg = args.other_emissions_fraction*(kg_gpu+travel_kg)
     total_kg = other_kg + kg_gpu + travel_kg
-    print('If GPU and conference emissions make up {0}% of your carbon footprint then the lab emitted a total of {1:.2f} tons of CO2 equivalent.'.format(100*(1.0-args.other_emissions_fraction), total_kg/1000.))
+    print('If GPU and conference emissions make up {0}% of your carbon footprint\nthen the lab emitted a total of {1:.2f} tons of CO2 equivalent.'.format(100*(1.0-args.other_emissions_fraction), total_kg/1000.))
 
 
 def get_carbon_for_flight(km):

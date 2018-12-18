@@ -20,6 +20,17 @@ This calculator estimates your carbon footprint by looking at the two largest fa
 - avg_gpu_util, default=0.75, type=float, help='The average utilization of all GPUs in the lab')
 - other_emissions_fraction, type=float, default=0.2, help='This is the fraction of all other emissions of your lab that are not from GPUs or conferences. This can be food, paper for printing, and others. The default value of 0.2 is quite conservative.')
 
+Since Seattle's electricity is carbon neutral, the [xlab](https://homes.cs.washington.edu/~yejin/) only source of emission is from conferences + others. Thus we call the script like this in our case:
+```=python
+python calc.py --hq Seattle --pubs xlab.txt --num_gpus 0
+>>> Your lab emitted 54.92 tons of CO2 equivalent for your conferences travels.
+>>> Your lab emitted 0.00 tons of CO2 equivalent by using GPUs
+>>> If GPU and conference emissions make up 80.0% of your carbon footprint
+>>> then the lab emitted a total of 65.91 tons of CO2 equivalent.
+
+
+```
+
 ## What to Offset The Calculated Emissions?
 
 1. Register with the [UN Carbon offset platform](https://offset.climateneutralnow.org/howtooffset).
